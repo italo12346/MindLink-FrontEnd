@@ -1,0 +1,17 @@
+.flag {
+  display: flex;
+  height: 5vh;
+  width: 17.1rem;
+  background: var(--color-secondary-blue);
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.flag h4 {
+  color: #ffffff;
+}
+@media (max-width: 800px) {
+  .flag {
+    width: 40vw;
+  }
+}

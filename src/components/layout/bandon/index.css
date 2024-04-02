@@ -1,0 +1,52 @@
+.bandon {
+  flex: 1;
+}
+.bandon-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  background: var(--color-secondary-palatine);
+  width: 97.5%;
+  padding: 1.2rem;
+}
+
+.bandon-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Alinhamento centralizado para o texto */
+}
+
+.step-number {
+  display: flex;
+  font-size: 2rem; /* Ajusta o tamanho do número */
+  margin-bottom: 0.5rem; /* Reduz a margem inferior para economizar espaço */
+  color: #000;
+}
+
+.bandon-step h3 {
+  margin-top: 1rem; /* Reduz a margem superior para economizar espaço */
+  font-size: 1rem; /* Ajusta o tamanho do texto */
+}
+
+.bandon-text {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Adiciona regras de mídia para ajustar em telas menores */
+@media (max-width: 700px) {
+  .bandon-container {
+    width: 100vw;
+    grid-template-columns: 1fr;
+  }
+  .step-number {
+    display: none;
+    font-size: 1.5rem; /* Ajusta o tamanho do número em telas menores */
+  }
+
+  .bandon-step h3 {
+    font-size: 0.9rem; /* Ajusta o tamanho do texto em telas menores */
+  }
+}

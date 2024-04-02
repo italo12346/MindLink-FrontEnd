@@ -1,0 +1,47 @@
+.Home {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+.section-1 {
+  padding: 0 8vw 2vh 8vw;
+}
+
+.section-2 {
+  display: flex;
+  padding: 0 8vw 2vh 8vw;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.text-info {
+  margin-right: 2rem;
+  width: 80%;
+}
+
+.text-info p {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .Home {
+    font-size: 3vw;
+  }
+  .Home p {
+    font-size: 3vw;
+  }
+  .bandon {
+    margin-left: -3%;
+  }
+  .bandon-container {
+    width: 93%;
+  }
+  .text-info {
+    margin-right: 1rem;
+    text-align: justify;
+  }
+}
