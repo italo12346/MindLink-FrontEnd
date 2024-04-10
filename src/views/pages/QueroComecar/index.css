@@ -1,0 +1,157 @@
+/* Estilos para o container principal */
+.queroComecar-container {
+  overflow: hidden;
+}
+.queroBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  background: var(--color-secondary-palatine);
+  padding: 0 3rem;
+  font-size: 1.1rem;
+}
+
+/* Estilos para o formulário */
+.queroComecar-form {
+  width: 50%;
+}
+
+/* Estilos para os títulos */
+.queroComecar-form label {
+  font-weight: 400;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  color: var(--color-secondary-blue);
+  font-size: 1.3rem; /* Definindo um tamanho base para o título */
+}
+
+.title strong {
+  text-align: left;
+  font-weight: 400;
+}
+
+/* Layout dos campos */
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.fields-left,
+.fields-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos específicos para o lado esquerdo */
+.fields-left {
+  width: 50%;
+  padding-right: 1rem;
+}
+
+/* Estilos específicos para o lado direito */
+.fields-right {
+  grid-column: 2;
+  width: 50%;
+  padding-left: 1rem;
+}
+
+/* Estilos para os campos de entrada e selects */
+.input-field,
+.fields-left select,
+.fields-right select {
+  width: calc(
+    100%
+  ); /* Leva em consideração o padding e a borda de 1px de cada lado */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-field {
+  width: 92%;
+}
+
+/* Estilização dos options */
+.input-field option {
+  padding: 10px;
+}
+
+/* Estilização para o hover */
+.input-field:hover {
+  border-color: #0056b3;
+}
+
+/* Estilização para o foco */
+.input-field:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+/* Estilos para o botão de envio */
+.submit {
+  margin-top: 2vh;
+  width: 100%;
+  padding: 10px;
+  background: var(--color-secondary-cyan);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para o container dos psicólogos */
+.psicologos-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5vh;
+  width: 100%;
+  height: 100%;
+}
+
+/* Regra de mídia para ajustar o tamanho do título em telas menores */
+@media (max-width: 720px) {
+  .queroBanner {
+    height: 50vh;
+    padding: 2px;
+  }
+
+  .queroComecar-form {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 3vw; /* Definindo o tamanho do título em unidades de viewport */
+  }
+
+  /* Ajuste para os campos */
+  .fields {
+    padding-left: 5px;
+    gap: 5px;
+  }
+  .fields-left,
+  .fields-right {
+    width: 100%;
+    padding: 0;
+  }
+  .input-field {
+    width: 90%;
+  }
+  .submit {
+    margin-top: 1.6rem;
+    width: 100%;
+  }
+}

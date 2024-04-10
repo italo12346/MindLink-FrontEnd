@@ -106,9 +106,9 @@ function NavBar() {
         <Link to="/">
           <span>Home</span>
         </Link>
-        <Link to="/como-funciona">
+        <a href="#section-2">
           <span>Como Funciona</span>
-        </Link>
+        </a>
         <Link to="/quero-comecar">
           <span>Quero Começar</span>
         </Link>

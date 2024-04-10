@@ -1,0 +1,13 @@
+.forum {
+  overflow: hidden;
+}
+.forum-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  background: var(--color-secondary-palatine);
+  padding: 0 3rem;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,88 @@
+/* Estilos para o cartão do psicólogo */
+.psicologo-card {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr auto; /* Ajustado para ocupar duas linhas */
+  width: 45%;
+  max-height: 25vh; /* Adicionado para limitar a altura */
+  margin-bottom: 2vh;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Permitir o posicionamento absoluto dos elementos filhos */
+  font-weight: 400;
+}
+
+.psicologo-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.psicologo-info {
+  display: flex;
+  flex-direction: column; /* Ajustado para organizar em coluna */
+  justify-content: space-between; /* Ajustado para distribuir espaço */
+  grid-column: 2;
+  grid-row: span 2; /* Ajustado para ocupar duas linhas */
+}
+
+.psicologo-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.psicologo-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.psicologo-card .valor-consulta {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.psicologo-card .psicologo-button {
+  display: flex;
+  align-items: center;
+  grid-column: 3;
+  grid-row: span 2; /* Alterado para segunda linha */
+}
+
+.approach {
+  grid-row: 2;
+}
+
+.psicologo-card button {
+  background-color: var(--color-secondary-cyan);
+  color: #fff;
+  border: none;
+  height: 2rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.psicologo-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query para celulares */
+@media screen and (max-width: 768px) {
+  .psicologo-card {
+    width: 90%; /* Ajuste o tamanho para se adaptar a telas menores */
+  }
+
+  .psicologo-image {
+    position: relative; /* Altere para posição relativa para se adaptar melhor a telas menores */
+    width: 100%; /* Ajuste a largura para preencher a largura do contêiner pai */
+    height: auto; /* Permita a altura ajustável para manter a proporção */
+    border-radius: 0; /* Remova o arredondamento da borda */
+    margin-bottom: 1rem; /* Adicione um espaçamento inferior */
+  }
+}

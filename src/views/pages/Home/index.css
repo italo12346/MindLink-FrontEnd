@@ -3,11 +3,11 @@
   margin: 0;
   flex: 1;
 }
-.section-1 {
+#section-1 {
   padding: 0 8vw 2vh 8vw;
 }
 
-.section-2 {
+#section-2 {
   display: flex;
   padding: 0 8vw 2vh 8vw;
 }

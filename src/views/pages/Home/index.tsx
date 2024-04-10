@@ -8,7 +8,7 @@ const Home = () => (
   <div className="Home">
     <Banner />
     <Flag title="Como Funciona ?" />
-    <section className="section-1">
+    <section id="section-1">
       <div className="info">
         <div className="text-info">
           <p>
@@ -41,7 +41,7 @@ const Home = () => (
       </div>
     </section>
     <Flag title="Por que fazer terapia?" />
-    <section className="section-2">
+    <section id="section-2">
       <div className="text-info">
         <p>
           A qualidade de nossa saúde mental está diretamente ligada à nossa
@@ -49,6 +49,21 @@ const Home = () => (
           depressão são extremamente comuns hoje em dia e, para auxiliar com
           isso, nada melhor do que a ajuda de profissionais.
         </p>
+        <p>
+          A prática da terapia online, realizada por meio de videoconferência,
+          audiocon- ferência ou comunicação por texto (como chat, SMS e e-mail),
+          tem uma história que remonta a mais de duas décadas, sendo
+          influenciada por várias formas de interação mediada por computador ao
+          longo do tempo (SKINNER; ZACK, 2004). Essa modalidade terapêutica se
+          originou dos grupos de apoio na web na década de 1970, dos serviços de
+          aconselhamento psicológico online gratuito em universidades
+          norte-americanas na década de 1980, e das práticas de terapia por
+          telefone e videoconferência psiquiátrica (SKINNER; ZACK, 2004).
+        </p>
+        <img
+          src="https://drive.google.com/uc?export=view&id=1XPSa8Qwb4e3ASLmrehpaFTqp2QnJeKfy
+"
+        />
       </div>
     </section>
   </div>
