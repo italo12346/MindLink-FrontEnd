@@ -1,7 +1,10 @@
+// Forum.tsx
 import React, { useState } from "react";
 import PostList from "../../../components/layout/postList";
 import PostForm from "../../../components/layout/postForm";
 import { deletePost } from "../../../service/api/apiForum";
+import "./index.css"; // Importar o arquivo CSS para estilização
+import Flag from "../../../components/layout/flag";
 
 interface Post {
   id: number;
@@ -28,7 +31,7 @@ const Forum: React.FC = () => {
 
   return (
     <div className="Forum">
-      <h1>Forum</h1>
+      <Flag title="Forum"></Flag>
       <div className="forum-content">
         <div className="post-form">
           <PostForm onPostCreated={handlePostCreated} />

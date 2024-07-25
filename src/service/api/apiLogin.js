@@ -7,7 +7,7 @@ export const login = async (userData) => {
     const response = await axios.post(API_URL + "login", userData);
     return response.data.token;
   } catch (error) {
-    console.error(error);
+
     throw error;
   }
 };
