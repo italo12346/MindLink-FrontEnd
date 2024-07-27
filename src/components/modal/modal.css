@@ -1,0 +1,47 @@
+/* Estilo para o contêiner do modal */
+.Modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Estilo do conteúdo do modal */
+.Modal-content {
+  position: relative; /* Para que o botão de fechar possa ser posicionado relativo a este contêiner */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar modal */
+.Modal-close-button {
+  position: absolute; /* Fica posicionado relativamente ao modal-content */
+  top: 15px; /* Ajuste a posição conforme necessário */
+  right: 10px; /* Ajuste a posição conforme necessário */
+  background: #ff5f5f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px; /* Ajuste o tamanho do ícone */
+}
+
+.Modal-close-button:hover {
+  background: #ff3b3b;
+}
