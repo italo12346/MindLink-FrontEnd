@@ -1,7 +1,5 @@
 const axios = require("axios");
-
-const API_URL = "http://localhost:3001/";
-
+const API_URL = require('./apiService')
 const fetchPost = async () => {
   try {
     const response = await axios.get(`${API_URL}/post`);

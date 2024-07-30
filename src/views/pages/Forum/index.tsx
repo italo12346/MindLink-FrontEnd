@@ -3,7 +3,6 @@ import PostList from "../../../components/layout/postList";
 import PostForm from "../../../components/layout/postForm";
 import { deletePost } from "../../../service/api/apiForum";
 import "./index.css"; // Importar o arquivo CSS para estilização
-import Flag from "../../../components/layout/flag";
 import Modal from "../../../components/modal"; // Importar o componente Modal
 
 interface Post {
@@ -33,13 +32,18 @@ const Forum: React.FC = () => {
 
   return (
     <div className="Forum">
-      <Flag title="Forum" />
       <div className="forum-content">
-        <label>Participe da Comunidade </label>
+      <div className="forumBanner">
+        <strong className="title">
+          Seja bem vindo, aqui você irá fazer o cadastro para trabalhar conosco.
+          Agradecemos o seu interesse!!!
+        </strong>
         <div className="post-actions">
           <button className="open-modal-button" onClick={() => setIsModalOpen(true)}>
-            Criar Postagem
+            Crie sua Postagem
           </button>
+      </div>
+        
         </div>
         <div className="post-list">
           <PostList posts={posts} onDelete={handleDeletePost} />
