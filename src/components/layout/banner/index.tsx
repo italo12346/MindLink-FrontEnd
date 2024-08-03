@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 const Banner = () => (
   <div className="banner">
     <img
@@ -13,7 +14,9 @@ const Banner = () => (
         bem-estar emocional em nossa comunidade acolhedora de apoio psicológico.
       </span>
       <div className="button">
+      <Link to="/quero-comecar">
         <input type="button" className="banner-input" value="Junte-se à nós" />
+        </Link>
       </div>
     </div>
   </div>

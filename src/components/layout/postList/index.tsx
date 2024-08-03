@@ -1,6 +1,5 @@
 // PostList.tsx
 import React from "react";
-import Flag from "../flag";
 
 
 interface Post {
@@ -17,7 +16,6 @@ interface PostListProps {
 const PostList: React.FC<PostListProps> = ({ posts, onDelete }) => {
   return (
     <div>
-      <Flag title="Posts"></Flag>
       {posts.map((post) => (
         <div key={post.id}>
           <h3>{post.title}</h3>

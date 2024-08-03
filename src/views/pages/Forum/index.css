@@ -8,15 +8,23 @@
 .forumBanner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  height: 28vh;
-  grid-column: span 2;
+  height: 25vh;
   background: var(--color-secondary-palatine);
+  overflow: hidden;
 }
-.post-actions{
-  padding: 10px;
+.banner-title{
+  width: 100%;
+  margin-left: 3.5rem;
+}
+.title{
+  width: 80%;
+}
+.Forum-img{
+  width: 80%;
+  height: 100%;
+  background-size: cover;
 }
 
 /* Contêiner do conteúdo do fórum */
@@ -36,6 +44,9 @@
   border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.3s, transform 0.2s;
+  position: absolute;
+  right: 3rem;
+  top: 10rem;
 }
 
 .open-modal-button:hover {

@@ -123,7 +123,7 @@
 }
 
 /* Regra de mídia para ajustar o tamanho do título em telas menores */
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .queroBanner {
     height: 50vh;
     padding: 2px;

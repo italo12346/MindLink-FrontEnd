@@ -60,7 +60,7 @@ const PostForm: React.FC<PostFormProps> = ({ onPostCreated }) => {
           />
         </div>
         <div className="form-group">
-          <label>Conteúdo:</label>
+          <label>Conteúdo</label>
           <Editor
             apiKey="iwvorl37aa4cz1ew7dfiw4ed83t09z83vqmpqj0pv17r0098" // Sua chave de API do TinyMCE
             value={content}

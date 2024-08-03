@@ -6,12 +6,12 @@ interface Psicologo {
   name: string;
   specialties: string;
   approach: string;
-  valorConsulta: number;
+  price: number;
   profilePicturePath: string;
 }
 
 const PsicologoCard: React.FC<{ psicologo: Psicologo }> = ({ psicologo }) => {
-  const { name, specialties, approach, valorConsulta, profilePicturePath } =
+  const { name, specialties, approach, price, profilePicturePath } =
     psicologo;
   console.log(profilePicturePath);
 
@@ -36,7 +36,7 @@ const PsicologoCard: React.FC<{ psicologo: Psicologo }> = ({ psicologo }) => {
           </p>
         </div>
       </div>
-      <p className="valor-consulta"> R${valorConsulta}</p>
+      <p className="valor-consulta"> R$ {price}</p>
       <div className="psicologo-button">
         <button>Entrar em Contato</button>
       </div>

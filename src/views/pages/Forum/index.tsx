@@ -4,6 +4,7 @@ import PostForm from "../../../components/layout/postForm";
 import { deletePost } from "../../../service/api/apiForum";
 import "./index.css"; // Importar o arquivo CSS para estilização
 import Modal from "../../../components/modal"; // Importar o componente Modal
+import Flag from "../../../components/layout/flag";
 
 interface Post {
   id: number;
@@ -33,23 +34,32 @@ const Forum: React.FC = () => {
   return (
     <div className="Forum">
       <div className="forum-content">
-      <div className="forumBanner">
-        <strong className="title">
-          Seja bem vindo, aqui você irá fazer o cadastro para trabalhar conosco.
-          Agradecemos o seu interesse!!!
-        </strong>
-        <div className="post-actions">
-          <button className="open-modal-button" onClick={() => setIsModalOpen(true)}>
-            Crie sua Postagem
-          </button>
-      </div>
-        
+        <div className="forumBanner">
+          <div className="banner-title">
+          <strong className="title">
+            Olá, bem vindo(a) a nossa comunidade, aqui você pode interagir com
+            outras pessoas, tirar duvidas, iniciar topicos de discursoes, toda a
+            nossa comunidade é feita para ajudar.
+          </strong>
+          </div>
+          <img
+            className="Forum-img"
+            src="https://static.vecteezy.com/ti/vetor-gratis/p3/4976444-psicologia-on-line-palavras-conceitos-banner-saude-mental-ajuda-bate-papo-com-terapeutas-apresentacao-site-isolado-letras-tipografia-ideia-com-icones-linear-esboco-ilustracao-vetor.jpg"
+            alt="Banner"
+          />
+              <button
+                className="open-modal-button"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Crie sua Postagem
+              </button>
         </div>
+        <Flag title="Posts"></Flag>
         <div className="post-list">
           <PostList posts={posts} onDelete={handleDeletePost} />
         </div>
       </div>
-      
+
       {/* Modal para criar postagem */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <PostForm onPostCreated={handlePostCreated} />

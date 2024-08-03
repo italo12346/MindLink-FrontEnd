@@ -34,7 +34,7 @@ const TrabalheConosco = (props: any) => {
     <div className="registerPsy-container">
       <div className="psyBanner">
         <strong className="title">
-          Seja bem vindo, aqui você irá fazer o cadastro para trabalhar conosco.
+          Seja bem vindo, aqui você irá fazer o cadastro para trabalhar conosco.<br></br>
           Agradecemos o seu interesse!!!
         </strong>
       </div>

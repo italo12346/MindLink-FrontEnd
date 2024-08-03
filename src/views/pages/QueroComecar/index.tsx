@@ -29,13 +29,13 @@ const QueroComecar = () => {
           <p>
             Encontre seu psicólogo!
             <br />
-            Comece agora seu atendimento psicológico online social
+            Comece agora seu atendimento psicológico online agora !!!
           </p>
         </div>
         <form className="queroComecar-form">
           <div className="fields">
             <div className="fields-left">
-              <label>Especialidade</label>
+              <label>Especialidade </label>
               <select
                 value={especialidade}
                 onChange={(e) => setEspecialidade(e.target.value)}
@@ -46,7 +46,7 @@ const QueroComecar = () => {
                 <option value="Depressão">Depressão</option>
                 {/* Adicione mais opções conforme necessário */}
               </select>
-              <label htmlFor="buscarNome">Buscar por Nome:</label>
+              <label htmlFor="buscarNome">Buscar por Nome</label>
               <input
                 type="text"
                 id="buscarNome"
@@ -56,7 +56,7 @@ const QueroComecar = () => {
               />
             </div>
             <div className="fields-right">
-              <label>Abordagem:</label>
+              <label>Abordagem</label>
               <select
                 value={abordagem}
                 onChange={(e) => setAbordagem(e.target.value)}
