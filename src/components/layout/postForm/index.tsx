@@ -60,13 +60,15 @@ const PostForm: React.FC<PostFormProps> = ({ onPostCreated }) => {
           />
         </div>
         <div className="form-group">
-          <label>Conteúdo</label>
+          <label htmlFor="content" className="label-content">
+            Conteúdo
+          </label>
           <Editor
-            apiKey="iwvorl37aa4cz1ew7dfiw4ed83t09z83vqmpqj0pv17r0098" // Sua chave de API do TinyMCE
+            apiKey="iwvorl37aa4cz1ew7dfiw4ed83t09z83vqmpqj0pv17r0098" // Substitua pela sua chave de API
             value={content}
             onEditorChange={(newValue) => setContent(newValue)}
             init={{
-              height: 300, // Ajuste a altura do editor conforme necessário
+              height: 300,
               menubar: false,
               plugins: [
                 "advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount",
@@ -77,6 +79,7 @@ const PostForm: React.FC<PostFormProps> = ({ onPostCreated }) => {
                 "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
             }}
             textareaName="content"
+            aria-required="true"
           />
         </div>
         {error && <div className="error-message">{error}</div>}

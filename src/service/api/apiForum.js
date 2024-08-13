@@ -1,45 +1,47 @@
-const axios = require("axios");
-const API_URL = require('./apiService')
-const fetchPost = async () => {
+import axios from "axios";
+import API_URL from "./apiURl";
+
+// Função para obter o token do sessionStorage
+const getToken = () => sessionStorage.getItem("token");
+
+// Função para obter todos os posts
+export const getAllPosts = async () => {
   try {
-    const response = await axios.get(`${API_URL}/post`);
-    if (response.status !== 200) {
-      throw new Error("Falha ao buscar post");
-    }
+    const response = await axios.get(`${API_URL}post/`);
     return response.data;
   } catch (error) {
-    console.error("Erro ao buscar post:", error);
+    console.error("Error fetching posts:", error);
     throw error;
   }
 };
 
-const createPost = async (postData) => {
+// Função para criar um novo post
+export const createPost = async (postData) => {
   try {
-    const response = await (`${API_URL}/post`, postData);
-    if (response.status !== 201) {
-      throw new Error("Falha ao criar post");
-    }
+    const token = getToken();
+    const response = await axios.post(`${API_URL}post/`, postData, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
     return response.data;
   } catch (error) {
-    console.error("Erro ao criar post:", error);
+    console.error("Error creating post:", error);
     throw error;
   }
 };
 
-const deletePost = async (postId) => {
+// Função para excluir um post
+export const deletePost = async (postId) => {
   try {
-    const response = await axios.delete(`${API_URL}/post/${postId}`);
-    if (response.status !== 200) {
-      throw new Error("Falha ao excluir post");
-    }
+    const token = getToken();
+    await axios.delete(`${API_URL}post/${postId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
   } catch (error) {
-    console.error("Erro ao excluir post:", error);
+    console.error("Error deleting post:", error);
     throw error;
   }
-};
-
-module.exports = {
-  fetchPost,
-  createPost,
-  deletePost,
 };

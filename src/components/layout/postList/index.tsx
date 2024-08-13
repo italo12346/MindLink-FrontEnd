@@ -1,6 +1,5 @@
-// PostList.tsx
 import React from "react";
-
+import "./index.css";
 
 interface Post {
   id: number;
@@ -15,14 +14,20 @@ interface PostListProps {
 
 const PostList: React.FC<PostListProps> = ({ posts, onDelete }) => {
   return (
-    <div>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <p>{post.content}</p>
-          <button onClick={() => onDelete(post.id)}>Delete</button>
-        </div>
-      ))}
+    <div className="post-list-container">
+      {posts.length > 0 ? (
+        posts.map((post) => (
+          <div key={post.id} className="post-item">
+            <h3 className="post-title">{post.title}</h3>
+            <p className="post-content">{post.content}</p>
+            <button className="delete-button" onClick={() => onDelete(post.id)}>
+              Delete
+            </button>
+          </div>
+        ))
+      ) : (
+        <p>No posts available.</p>
+      )}
     </div>
   );
 };
